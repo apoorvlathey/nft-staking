@@ -1,0 +1,3 @@
+[
+  "function deploy(string[3] memory metadata, uint256[3] maxSupply, uint256[3] points) external"
+]

@@ -1,9 +1,10 @@
 import { useColorModeValue, Flex, Heading, Box, Link } from "@chakra-ui/react";
 import ConnectWallet from "./ConnectWallet";
-import { Signer, Web3Provider, setSignerAddress } from "../types";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 function Navbar() {
+  const router = useRouter();
+
   return (
     <Flex
       py="4"
@@ -19,7 +20,7 @@ function Navbar() {
         fontFamily="Poppins"
         fontWeight="600"
       >
-        <Link href="/">nft-staking</Link>
+        <Link onClick={() => router.push("/")}>nft-staking</Link>
       </Heading>
       <Flex flex="1" justifyContent="flex-end">
         <Box mr="1rem">
